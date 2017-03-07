@@ -1,0 +1,10 @@
+# file roles/swarm-manager/tasks/main.yml
+
+# - debug: var=hostvars[inventory_hostname].groups['swarm-leaders'][0]
+# - debug: var=hostvars[hostvars[inventory_hostname].groups['swarm-leaders'][0]].swarm_token_manager.stdout
+# - debug: var=hostvars[hostvars[inventory_hostname].groups['swarm-leaders'][0]].ansible_default_ipv4.address
+
+- name: joining swarm
+  shell: 'docker info | grep NodeID || docker swarm join --token {{ hostvars[hostvars[inventory_hostname]["groups"]["swarm-leaders"][0]].swarm_token_manager.stdout }} {{ hostvars[hostvars[inventory_hostname]["groups"]["swarm-leaders"][0]].ansible_default_ipv4.address }}:2377'
+
+

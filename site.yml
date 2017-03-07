@@ -1,0 +1,4 @@
+# file: site.yml
+- include: swarm-leaders.yml
+- include: swarm-managers.yml
+- include: swarm-workers.yml

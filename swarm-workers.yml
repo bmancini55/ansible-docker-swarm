@@ -1,0 +1,9 @@
+# file: swarm-workers.yml
+
+- hosts: swarm-workers
+  become: yes
+
+  roles:
+    - common
+    - docker-engine
+    - swarm-worker

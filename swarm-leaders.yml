@@ -1,0 +1,9 @@
+# file swarm-leader.yml
+
+- hosts: swarm-leaders
+  become: yes
+
+  roles:
+    - common
+    - docker-engine
+    - swarm-leader

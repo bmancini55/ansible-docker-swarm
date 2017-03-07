@@ -1,0 +1,11 @@
+
+# ignore inventory files
+production
+staging
+dev
+
+# ignore retry files
+*.retry
+
+# ignore stupid apple file
+.DS_Store

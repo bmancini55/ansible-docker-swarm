@@ -1,0 +1,9 @@
+# file swarm-managers.yml
+
+- hosts: swarm-managers
+  become: yes
+
+  roles:
+    - common
+    - docker-engine
+    - swarm-manager
