@@ -10,4 +10,5 @@ This playbook will install Docker and initialize the swarm. Swarm commands are i
 
 ```
 ansible-playbook -i test site.yml
+ansible-playbook -i test --key-file=~/keys/test.pem --user ubuntu site.yml
 ```
