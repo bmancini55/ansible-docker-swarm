@@ -1,0 +1,12 @@
+# file roles/aws_cli/tasks/main.yml
+#
+
+- name: install python pip
+  apt:
+    name: python-pip
+    state: latest
+
+- name: install aws
+  pip:
+    name: awscli
+    state: latest

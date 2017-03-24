@@ -7,3 +7,4 @@
     - common
     - docker-engine
     - swarm-leader
+    - aws_cli
